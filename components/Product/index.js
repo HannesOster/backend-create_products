@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { ProductCard } from "./Product.styled";
 import Comments from "../Comments";
 import { StyledLink } from "../Link/Link.styled";
+import ReviewForm from "../ReviewForm/ReviewForm";
 
 export default function Product() {
   const router = useRouter();
@@ -26,7 +27,18 @@ export default function Product() {
         Price: {data.price} {data.currency}
       </p>
       {data.reviews.length > 0 && <Comments reviews={data.reviews} />}
-      <StyledLink href="/">Back to all</StyledLink>
+
+      <ReviewForm />
+      <StyledLink style={{ marginTop: 20 }} href="/">
+        Back to all
+      </StyledLink>
     </ProductCard>
   );
 }
+
+// title
+// "I like!"
+// text
+// "Love this one, very handsome!"
+// rating
+// 5
