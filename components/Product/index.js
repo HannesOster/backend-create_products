@@ -28,7 +28,7 @@ export default function Product() {
       </p>
       {data.reviews.length > 0 && <Comments reviews={data.reviews} />}
 
-      <ReviewForm />
+      <ReviewForm id={id} />
       <StyledLink style={{ marginTop: 20 }} href="/">
         Back to all
       </StyledLink>
